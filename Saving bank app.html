@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Saving Box">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Money Saving Box</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ECE8E2; --surface:#FFFFFF; --text:#2A1F18; --muted:#7A6B60; --line:#DDD5CB;
+  --wood:#2B1F18; --wood2:#3A2A20; --gold:#D9B45A; --gold2:#F2D98A; --goldDeep:#9C7A2A;
+  --danger:#B3402F;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15100C; --surface:#211913; --text:#F1E8DC; --muted:#A8998B; --line:#3A2E25;
+    --danger:#E0715F; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15100C; --surface:#211913; --text:#F1E8DC; --muted:#A8998B; --line:#3A2E25;
+  --danger:#E0715F; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Hind,system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.5;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:460px;margin:0 auto;padding:16px 16px 40px}
+.num{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-variant-numeric:tabular-nums}
+
+/* The box lid */
+.lid{position:relative;border-radius:6px;padding:10px;
+  background:linear-gradient(135deg,var(--gold2),var(--gold) 30%,var(--goldDeep) 55%,var(--gold) 80%,var(--gold2));
+  box-shadow:0 10px 30px rgba(40,20,5,.35)}
+.panel{border-radius:2px;padding:22px 20px 18px;color:#F3E2B3;
+  background:
+    repeating-linear-gradient(92deg,rgba(255,255,255,.025) 0 2px,transparent 2px 9px),
+    linear-gradient(160deg,var(--wood2),var(--wood));
+  box-shadow:inset 0 0 0 1px rgba(217,180,90,.25)}
+.panel .label{font-size:14px;color:#C9B48A;margin:0}
+.total{font-size:64px;font-weight:700;line-height:1;margin:4px 0 2px;color:var(--gold2);letter-spacing:.5px}
+.total small{font-size:34px;margin-right:2px;color:var(--gold)}
+.goalrow{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;color:#C9B48A;margin-top:14px}
+.goalrow b{color:#F3E2B3;font-weight:600}
+.bar{height:10px;border-radius:5px;background:rgba(0,0,0,.4);margin-top:8px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,.5)}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--goldDeep),var(--gold2));transition:width .6s ease}
+.stats{display:flex;gap:18px;margin-top:14px;font-size:14px;color:#C9B48A}
+.stats span b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:22px;color:#F3E2B3;font-weight:600;line-height:1.1}
+.editgoal{position:absolute;top:18px;right:20px;background:none;border:1px solid rgba(217,180,90,.4);color:#C9B48A;font:inherit;font-size:13px;padding:2px 10px;border-radius:20px;cursor:pointer}
+
+/* Add buttons */
+h2{font-size:17px;font-weight:600;margin:26px 0 10px}
+.datebar{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin:-4px 0 12px}
+.datebar input{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 8px}
+.coins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.coin{appearance:none;border:none;cursor:pointer;border-radius:14px;padding:16px 0 12px;
+  background:linear-gradient(180deg,var(--wood2),var(--wood));color:var(--gold2);
+  box-shadow:inset 0 0 0 2px var(--gold),0 3px 0 var(--goldDeep);
+  transition:transform .08s}
+.coin:active{transform:translateY(3px);box-shadow:inset 0 0 0 2px var(--gold),0 0 0 var(--goldDeep)}
+.coin .num{font-size:34px;font-weight:700;line-height:1}
+.coin .num::before{content:"₹";font-size:20px;margin-right:2px;color:var(--gold)}
+.coin span{display:block;font-size:12px;color:#C9B48A;margin-top:2px}
+.custom{display:flex;gap:10px;margin-top:10px}
+.custom input{flex:1;min-width:0;font:inherit;font-size:18px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.custom button{font:inherit;font-weight:600;padding:0 18px;border-radius:12px;border:none;background:var(--gold);color:#2A1F18;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* History */
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.dayhead{display:flex;justify-content:space-between;align-items:center;width:100%;padding:12px 14px;background:none;border:none;color:var(--text);font:inherit;text-align:left;cursor:pointer}
+.dayhead .d{font-weight:600}
+.dayhead .d small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.dayhead .amt{font-size:24px;font-weight:600}
+.entries{list-style:none;margin:0;padding:0 14px 8px;display:none}
+.day.open .entries{display:block}
+.entries li{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.entries .t{color:var(--muted)}
+.del{background:none;border:none;color:var(--danger);font:inherit;font-size:13px;cursor:pointer;padding:4px 6px}
+.lastrow{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;font-size:15px}
+.lastrow[hidden]{display:none}
+.lastrow .t{color:var(--muted);font-size:13px}
+.lastrow button{font:inherit;font-weight:600;border:1px solid var(--danger);color:var(--danger);background:none;border-radius:10px;padding:6px 14px;cursor:pointer}
+.armed{background:var(--danger)!important;color:#fff!important;border-color:var(--danger)!important}
+.goalform{display:none;gap:8px;margin-top:10px}
+.goalform.show{display:flex}
+.goalform input{flex:1;min-width:0;font:inherit;font-size:17px;padding:8px 10px;border-radius:8px;border:1px solid var(--gold);background:rgba(0,0,0,.3);color:#F3E2B3}
+.goalform button{font:inherit;font-weight:600;border:none;border-radius:8px;padding:0 14px;background:var(--gold);color:#2A1F18;cursor:pointer}
+.bk{display:none;margin-top:10px}
+.bk.show{display:block}
+.bk textarea{width:100%;height:90px;font:13px/1.4 ui-monospace,Menlo,monospace;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.bk p{font-size:13px;color:var(--muted);margin:4px 0 8px}
+.empty{color:var(--muted);text-align:center;padding:24px 10px;border:1px dashed var(--line);border-radius:12px}
+.sync{font-size:12px;color:var(--muted);text-align:center;margin-top:20px}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);
+  background:var(--wood);color:#F3E2B3;border:1px solid var(--gold);border-radius:12px;padding:10px 12px 10px 16px;
+  display:flex;gap:14px;align-items:center;font-size:15px;transition:transform .25s ease;z-index:20;max-width:92vw}
+.toast.show{transform:translate(-50%,0)}
+.toast button{background:var(--gold);color:#2A1F18;border:none;border-radius:8px;font:inherit;font-weight:600;padding:4px 12px;cursor:pointer}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.06)}100%{transform:scale(1)}}
+.pop{animation:pop .35s ease}
+@media (prefers-reduced-motion:reduce){.bar i,.toast{transition:none}.pop{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="lid">
+    <div class="panel">
+      <button class="editgoal" id="editGoal">Goal badlo</button>
+      <p class="label">Total saving</p>
+      <div class="total num" id="total"><small>₹</small>0</div>
+      <div class="goalrow"><span>Goal <b class="num" id="goal">₹2,00,000</b></span><span id="pct">0%</span></div>
+      <div class="goalform" id="goalForm"><input type="number" inputmode="numeric" id="goalInput" min="1"><button id="goalSave">Save</button></div>
+      <div class="bar"><i id="barFill"></i></div>
+      <div class="stats">
+        <span><b id="remain">₹2,00,000</b>baaki</span>
+        <span><b id="days">0</b>din save kiya</span>
+        <span><b id="count">0</b>notes</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Aaj box mein kitna daala?</h2>
+  <div class="datebar"><label for="date">Date</label><input type="date" id="date"><span id="dateHint"></span></div>
+  <div class="coins">
+    <button class="coin" data-amt="100"><div class="num">100</div><span>add karo</span></button>
+    <button class="coin" data-amt="200"><div class="num">200</div><span>add karo</span></button>
+    <button class="coin" data-amt="500"><div class="num">500</div><span>add karo</span></button>
+  </div>
+  <div class="custom">
+    <input type="number" inputmode="numeric" id="customAmt" placeholder="Koi aur amount (₹)" min="1">
+    <button id="addCustom">Add</button>
+  </div>
+
+  <div class="lastrow" id="lastRow" hidden>
+    <span>Last entry: <b class="num" id="lastAmt" style="font-size:19px"></b> <span class="t" id="lastWhen"></span></span>
+    <button id="undoLast">Undo</button>
+  </div>
+
+  <h2>Din-wise record</h2>
+  <div id="history"></div>
+  <h2>Backup</h2>
+  <div class="custom" style="margin-top:0">
+    <button id="exportBtn" style="flex:1;padding:12px">Backup copy karo</button>
+    <button id="importBtn" style="flex:1;padding:12px;background:var(--surface);color:var(--text);border:1px solid var(--line)">Backup restore</button>
+  </div>
+  <div class="bk" id="bkBox"><p id="bkHint"></p><textarea id="bkText"></textarea>
+    <div class="custom"><button id="bkCopy" style="flex:1;padding:10px">Copy</button><button id="bkRestore" style="flex:1;padding:10px">Restore karo</button></div></div>
+  <p class="sync" id="sync">Loading…</p>
+</div>
+
+<div class="toast" id="toast"><span id="toastMsg"></span><button id="undoBtn">Undo</button></div>
+
+<script>
+(function(){
+  const LS_KEY = "savingsBox.v1";
+  let state = { goal: 200000, entries: [] }; // entries: {id, amt, date:'YYYY-MM-DD', ts}
+  let lastAddedId = null, toastTimer = null;
+
+  const $ = id => document.getElementById(id);
+  const inr = n => "₹" + Math.round(n).toLocaleString("en-IN");
+  const todayStr = () => { const d = new Date(); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0,10); };
+  const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+
+  function twoTap(btn, armedLabel, action){
+    if (btn.dataset.armed) { action(); return; }
+    const old = btn.textContent;
+    btn.dataset.armed = "1"; btn.textContent = armedLabel; btn.classList.add("armed");
+    setTimeout(() => { if (btn.isConnected && btn.dataset.armed) { delete btn.dataset.armed; btn.textContent = old; btn.classList.remove("armed"); } }, 3000);
+  }
+
+  $("date").value = todayStr();
+  $("date").max = todayStr();
+
+  function lsRead(){ try{ const v = localStorage.getItem(LS_KEY); return v ? JSON.parse(v) : null; }catch(e){ return null; } }
+  function lsWrite(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }catch(e){} }
+
+  function persist(){
+    lsWrite();
+  }
+
+  function fmtDay(ds){
+    const d = new Date(ds + "T00:00:00");
+    const t = todayStr();
+    const y = new Date(); y.setDate(y.getDate()-1);
+    const ys = new Date(y.getTime() - y.getTimezoneOffset()*60000).toISOString().slice(0,10);
+    const main = d.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"});
+    const wd = d.toLocaleDateString("en-IN",{weekday:"long"});
+    return { main: ds===t ? "Aaj" : ds===ys ? "Kal" : main, sub: (ds===t||ds===ys) ? main + ", " + wd : wd };
+  }
+
+  function render(){
+    const total = state.entries.reduce((s,e)=>s+e.amt,0);
+    const pct = state.goal ? Math.min(100, total/state.goal*100) : 0;
+    $("total").innerHTML = "<small>₹</small>" + Math.round(total).toLocaleString("en-IN");
+    $("goal").textContent = inr(state.goal);
+    $("pct").textContent = (pct >= 10 ? pct.toFixed(0) : pct.toFixed(1)) + "%";
+    $("barFill").style.width = pct + "%";
+    $("remain").textContent = inr(Math.max(0, state.goal - total));
+    const byDay = {};
+    state.entries.forEach(e => { (byDay[e.date] = byDay[e.date] || []).push(e); });
+    const days = Object.keys(byDay).sort().reverse();
+    $("days").textContent = days.length;
+    $("count").textContent = state.entries.length;
+
+    const last = state.entries.reduce((m,e)=> !m || e.ts>m.ts ? e : m, null);
+    $("lastRow").hidden = !last;
+    if (last) {
+      $("lastAmt").textContent = inr(last.amt);
+      $("lastWhen").textContent = fmtDay(last.date).main + ", " + new Date(last.ts).toLocaleTimeString("en-IN",{hour:"numeric",minute:"2-digit"});
+    }
+
+    const h = $("history");
+    if (!days.length){ h.innerHTML = '<div class="empty">Abhi koi entry nahi. Upar 100, 200 ya 500 dabao — record yahan aayega.</div>'; return; }
+    const openSet = new Set([...h.querySelectorAll(".day.open")].map(x=>x.dataset.day));
+    if (!h.querySelector(".day")) openSet.add(days[0]);
+    h.innerHTML = "";
+    days.forEach(ds => {
+      const list = byDay[ds].sort((a,b)=>b.ts-a.ts);
+      const sum = list.reduce((s,e)=>s+e.amt,0);
+      const f = fmtDay(ds);
+      const box = document.createElement("div");
+      box.className = "day" + (openSet.has(ds) ? " open" : "");
+      box.dataset.day = ds;
+      const head = document.createElement("button");
+      head.className = "dayhead";
+      head.setAttribute("aria-expanded", openSet.has(ds));
+      head.innerHTML = `<span class="d"></span><span class="amt num"></span>`;
+      head.querySelector(".d").innerHTML = `${f.main}<small>${f.sub} · ${list.length} ${list.length===1?"entry":"entries"}</small>`;
+      head.querySelector(".amt").textContent = inr(sum);
+      head.onclick = () => { box.classList.toggle("open"); head.setAttribute("aria-expanded", box.classList.contains("open")); };
+      const ul = document.createElement("ul"); ul.className = "entries";
+      list.forEach(e => {
+        const li = document.createElement("li");
+        const time = new Date(e.ts).toLocaleTimeString("en-IN",{hour:"numeric",minute:"2-digit"});
+        li.innerHTML = `<span><b class="num" style="font-size:19px">${inr(e.amt)}</b> <span class="t">${time}</span></span>`;
+        const del = document.createElement("button");
+        del.className = "del"; del.textContent = "Hatao";
+        del.onclick = () => twoTap(del, "Pakka? Tap", () => { state.entries = state.entries.filter(x=>x.id!==e.id); persist(); render(); showToast(`${inr(e.amt)} hata diya`); });
+        li.appendChild(del); ul.appendChild(li);
+      });
+      box.appendChild(head); box.appendChild(ul); h.appendChild(box);
+    });
+  }
+
+  function showToast(msg, canUndo){
+    $("toastMsg").textContent = msg;
+    $("undoBtn").style.display = canUndo ? "" : "none";
+    $("toast").classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(()=>$("toast").classList.remove("show"), 8000);
+  }
+
+  function add(amt){
+    amt = Math.round(Number(amt));
+    if (!amt || amt <= 0) return;
+    const date = $("date").value || todayStr();
+    const e = { id: uid(), amt, date, ts: Date.now() };
+    state.entries.push(e); lastAddedId = e.id;
+    persist(); render();
+    const t = $("total"); t.classList.remove("pop"); void t.offsetWidth; t.classList.add("pop");
+    if (navigator.vibrate) navigator.vibrate(15);
+    showToast(`${inr(amt)} add ho gaya` + (date!==todayStr() ? ` (${fmtDay(date).main})` : ""), true);
+  }
+
+  document.querySelectorAll(".coin").forEach(b => b.onclick = () => add(b.dataset.amt));
+  $("addCustom").onclick = () => { add($("customAmt").value); $("customAmt").value = ""; };
+  $("customAmt").addEventListener("keydown", ev => { if (ev.key==="Enter") $("addCustom").click(); });
+  $("undoBtn").onclick = () => {
+    if (!lastAddedId) return;
+    state.entries = state.entries.filter(x=>x.id!==lastAddedId); lastAddedId = null;
+    persist(); render(); $("toast").classList.remove("show");
+  };
+  $("undoLast").onclick = () => twoTap($("undoLast"), "Pakka? Tap again", () => {
+    const last = state.entries.reduce((m,e)=> !m || e.ts>m.ts ? e : m, null);
+    if (!last) return;
+    state.entries = state.entries.filter(x=>x.id!==last.id); lastAddedId = null;
+    persist(); render(); showToast(`${inr(last.amt)} hata diya`);
+  });
+  $("editGoal").onclick = () => { const f=$("goalForm"); f.classList.toggle("show"); $("goalInput").value = state.goal; if (f.classList.contains("show")) $("goalInput").focus(); };
+  $("goalSave").onclick = () => { const n = Math.round(Number($("goalInput").value)); if (n > 0) { state.goal = n; persist(); render(); $("goalForm").classList.remove("show"); } };
+  $("date").onchange = () => { $("dateHint").textContent = $("date").value !== todayStr() ? "purani date pe add hoga" : ""; };
+
+  $("exportBtn").onclick = () => {
+    $("bkBox").classList.add("show"); $("bkHint").textContent = "Yeh pura text copy karke Notes/WhatsApp mein save kar lo.";
+    $("bkText").value = JSON.stringify(state); $("bkCopy").style.display=""; $("bkRestore").style.display="none";
+  };
+  $("bkCopy").onclick = async () => { try { await navigator.clipboard.writeText($("bkText").value); showToast("Backup copy ho gaya"); } catch(e){ $("bkText").select(); showToast("Text select ho gaya — copy kar lo"); } };
+  $("importBtn").onclick = () => {
+    $("bkBox").classList.add("show"); $("bkHint").textContent = "Apna backup text yahan paste karo, phir Restore dabao.";
+    $("bkText").value = ""; $("bkCopy").style.display="none"; $("bkRestore").style.display="";
+  };
+  $("bkRestore").onclick = () => {
+    let d; try { d = JSON.parse($("bkText").value); if (!Array.isArray(d.entries)) throw 0; } catch(e){ showToast("Yeh backup text sahi nahi hai"); return; }
+    twoTap($("bkRestore"), "Abhi ka data replace hoga — tap", () => {
+      state = { goal: d.goal || 200000, entries: d.entries }; persist(); render();
+      $("bkBox").classList.remove("show"); showToast(`${d.entries.length} entries restore ho gayi`);
+    });
+  };
+
+  // Local first
+  const local = lsRead();
+  if (local && Array.isArray(local.entries)) state = { goal: local.goal || 200000, entries: local.entries };
+  render();
+  $("sync").textContent = "Data isi phone mein saved hai";
+
+})();
+</script>
+</body>
+</html>
